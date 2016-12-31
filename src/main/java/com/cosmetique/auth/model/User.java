@@ -9,6 +9,7 @@ public class User {
     private Long id;
     private String name;
     private String lastname;
+    private String region;
     private float poid;
     private float taille;
     private String username;
@@ -49,8 +50,17 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+    
+    
+    public String getRegion() {
+		return region;
+	}
 
-    public String getPassword() {
+	public void setRegion(String region) {
+		this.region = region;
+	}
+
+	public String getPassword() {
         return password;
     }
 

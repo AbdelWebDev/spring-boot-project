@@ -1,55 +1,47 @@
 package com.cosmetique.auth.model;
-
+import java.util.List;
 import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import javax.persistence.ManyToMany;
 
 @Entity
-
-public class Ingredient {
-
+public class Effet {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	private String libelleIngredient;
-	@ManyToMany(mappedBy = "ingredients")
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long Id;
+	private String libelleEffet;
+	@ManyToMany(mappedBy="effets")
 	private Set<ProduitCosmetique> produits;
-
 	public Long getId() {
-		return id;
+		return Id;
 	}
-
 	public void setId(Long id) {
-		this.id = id;
+		Id = id;
 	}
-
-	public String getLibelleIngredient() {
-		return libelleIngredient;
+	public String getLibelleEffet() {
+		return libelleEffet;
 	}
-
-	public void setLibelleIngredient(String libelleIngredient) {
-		this.libelleIngredient = libelleIngredient;
+	public void setLibelleEffet(String libelleEffet) {
+		this.libelleEffet = libelleEffet;
 	}
-
 	public Set<ProduitCosmetique> getProduits() {
 		return produits;
 	}
-
 	public void setProduits(Set<ProduitCosmetique> produits) {
 		this.produits = produits;
 	}
-
-	public Ingredient() {
+	public Effet(String libelleEffet) {
+		super();
+		this.libelleEffet = libelleEffet;
+	}
+	public Effet() {
 		super();
 	}
-
-	public Ingredient(String libelleIngredient) {
-		super();
-		this.libelleIngredient = libelleIngredient;
-	}
+	
+	
 
 }

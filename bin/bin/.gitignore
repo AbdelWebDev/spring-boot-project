@@ -5,3 +5,8 @@ out
 .project
 .idea
 *.iml
+/.gitignore
+/LICENSE
+/README.md
+/pom.xml
+/src/
